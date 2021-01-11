@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         if(item.itemId==R.id.story)
             startActivity(Intent(this,story::class.java))
+        else if(item.itemId==R.id.list)
+            startActivity(Intent(this,List::class.java))
+        else if(item.itemId==R.id.contact)
+            startActivity(Intent(this,Contact::class.java))
         binding.draw.closeDrawers()
         return false
     }
