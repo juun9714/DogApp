@@ -4,21 +4,25 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/home"
+            android:fontFamily="@font/marubury"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Home"/>
+            android:title="소개"/>
 
         <item
             android:id="@+id/story"
-            android:title="Story"
+            android:fontFamily="@font/marubury"
+            android:title="이야기"
             android:icon="@drawable/education"/>
 
         <item
             android:id="@+id/list"
-            android:title="List"
+            android:fontFamily="@font/marubury"
+            android:title="보호소들"
             android:icon="@drawable/ic_baseline_reorder_24"/>
 
         <item
             android:id="@+id/contact"
+            android:fontFamily="@font/marubury"
             android:title="Contact"
             android:icon="@drawable/ic_baseline_email_24"/>
     </group>
