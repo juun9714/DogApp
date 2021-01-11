@@ -10,6 +10,12 @@ import com.google.android.material.navigation.NavigationView
 
 class List : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding : ActivityListBinding
+    var centerList = arrayListOf<center>(
+        //val name:String, val profile:Int, val owner:String, val location:String, val sns: String
+        center("보호소1",R.drawable.center,"소장님1","경기도 성남시","@gone_june"),
+        center("보호소2",R.drawable.center,"소장님2","경기도 용인시","@allcurvesandedges"),
+        center("보호소3",R.drawable.center,"소장님3","경기도 수원시","@youumppa"),
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityListBinding.inflate(layoutInflater)
@@ -20,6 +26,9 @@ class List : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             binding.drawList.openDrawer(GravityCompat.START)
         }
         binding.nvMenuList.setNavigationItemSelectedListener(this)
+
+        val adapter=ListAdapter(this,centerList)
+        binding.listView.adapter=adapter
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
